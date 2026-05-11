@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Literary Journal</title>
+    <style>
+        /* Typography and Color Palette */
+        :root {
+            --bg-color: #faf9f6; /* Warm off-white to mimic book paper */
+            --text-color: #1a1a1a; /* Soft black to reduce eye strain */
+            --accent-color: #666666;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: "Georgia", "Times New Roman", serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden; /* Prevents accidental horizontal scrolling */
+        }
+
+        /* Header and Navigation */
+        header {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+            padding: 5rem 0 3rem;
+            border-bottom: 1px solid var(--text-color);
+            margin-bottom: 4rem;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: normal;
+            letter-spacing: 0.05em;
+            margin: 0 0 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--accent-color);
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* THIS FIXES THE OFF-CENTER ISSUE */
+            gap: 1.5rem 3rem; /* Adds row gap for when items wrap */
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: all 0.3s ease; 
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 6px;
+        }
+
+        /* Main Content Formatting */
+        main {
+            max-width: 650px; 
+            width: 100%;
+        }
+
+        section {
+            margin-bottom: 5rem;
+            padding-top: 2rem; 
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: normal;
+            font-style: italic;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .entry {
+            margin-bottom: 3.5rem;
+        }
+
+        .entry-title {
+            font-size: 1.3rem;
+            margin: 0 0 0.2rem;
+            font-weight: bold;
+        }
+
+        .entry-meta {
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            margin-bottom: 1.2rem;
+            font-style: italic;
+        }
+
+        p {
+            margin: 0 0 1.5rem;
+            text-align: justify; 
+            hyphens: auto; 
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-color);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--text-color);
+            font-style: italic;
+            transition: all 0.3s ease; 
+        }
+
+        .read-more:hover {
+            color: var(--accent-color);
+            border-bottom-color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+            padding: 3rem 0;
+            border-top: 1px solid var(--accent-color);
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--text-color);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            nav { gap: 1rem; flex-direction: column; align-items: center; } /* Centers nav on mobile */
+            main { padding: 0 10px; }
+            p { text-align: left; } 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tyler Sooknanan</h1>
+        <span class="subtitle">Creative Writer | Film Enthusiast | Sports Fan</span>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#sports">Sports/Esports</a>
+            <a href="#books">Literature and Film</a>
+            <a href="#academic-essays">My Favourite Academic Essays</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About</h2>
+            <div class="entry">
+                <p>
+                    Current Honours Bachelor of Arts English Student at the University of Ottawa, specializing in narrative structure and digital communication. 
+                    Beyond academics, I served as an Executive member of the biggest club at the school in uOttawa Esports for four years, where I managed both social media and managerial roles within the collegiate esports landscape. I also spend 4 years as a collegiate esports player as captain, leading the uOttawa Esports Valorant team to multiple achievements and ranked as a top 15 Collegiate team in North America. I like to write, and I like to embrace the art of the world around me, which ultimately led to the creation of this page where I can do both.
+                </p>
+            </div>
+        </section>
+
+        <section id="sports">
+            <h2>Sports/Esports</h2>
+            <div class="entry">
+                <h3 class="entry-title">The Poetry of the Pitch</h3>
+                <div class="entry-meta">Published Fall 2025</div>
+                <p>An exploration of the rhythmic geometry inherent in modern football, drawing parallels between the spatial awareness of a central midfielder and the stanzaic structure of modernist poetry. The beautiful game reveals itself not in the final score, but in the negative space between defenders.</p>
+                <a href="[LINK TO PDF OR GOOGLE DOC]" class="read-more" target="_blank">Read full article</a>
+            </div>
+        </section>
+
+        <section id="books">
+            <h2>Literature and Film</h2>
+            <div class="entry">
+                <h3 class="entry-title">When Three Creative Mediums Portray The Same Themes in Three Different Periods</h3>
+                <div class="entry-meta">Winter 2026</div>
+                <p>A critical examination of the theme of identity and reconstruction as a means for female protagonists to navigate and temporarily escape the restrictive social roles imposed by a patriarchal society. The text examines the similarities in the portrayal of these themes between these three works: <I>Fantomina; or Love in a Maze, Belle de Jour,</I> and <I>Black Swan.</I></p>
+                <a href="https://docs.google.com/document/d/1ITdOcMqq2flk457Ue68C0jeSIJmMjU3TakWP7czbBEc/edit?usp=sharing" class="read-more" target="_blank">Read full review</a>
+            </div>
+
+		<h3 class="entry-title">Review Compilation 1: <I>Oldboy, Memories of Murder, Eyes Wide Shut, The Silence of the Lambs, The Departed, American Psycho, The Social Network, Oppenheimer, and Pride and Prejudice. </I></h3>
+                <div class="entry-meta">Fall 2025 - Winter 2026</div>
+                <p>A compilation of Reviews made on these films above, the reviews are written very informally to capture my raw reaction to these films. Every single one of these reviews were made within 30 minutes of watching the film and is thus the most pure commentary available from me on these specific works.</p>
+                <a href="https://docs.google.com/document/d/11OTmmRwYukDhdTFdDoPCCZIeTxBTaV1GiJusuVAQPIc/edit?usp=sharing" class="read-more" target="_blank">Read full review</a>
+            </div>
+        </section>
+
+        <section id="academic-essays">
+            <h2>My Favourite Academic Essays</h2>
+            <div class="entry">
+                <h3 class="entry-title">Defending Canada Culture Against American Mass Media</h3>
+                <div class="entry-meta">Canadian Fiction, Winter 2026</div>
+                <p>This essay examines Elizabeth Smart's high modernist novel, <i>By Grand Central Station I Sat Down and Wept,</i> as a strategic defence against the mid-20th-century American invasion of Canadian Culture. By analyzing the text alongside the 1951 Massey Report, the paper argues that Smart's literary innovation serves as a direct rebuttal to the cultural anxieties regarding "permanent dependence" on American mass media.</p>
+                <a href="https://docs.google.com/document/d/1mQ7M84SYxqQQuVAOaAgd8TZMiEvHfqqkm7yirVISzrk/edit?usp=sharing" class="read-more" target="_blank">Read full essay</a>
+            </div>
+            
+            <div class="entry">
+                <h3 class="entry-title">The politics of place and time: Religious-Induced Hysteria in 17th Century New England </h3>
+                <div class="entry-meta">American Literature, Winter 2026</div>
+                <p>This essay investigates the intersection of landscape, politics, and religious hysteria in 17th-century New England. By examining the defining influence of Puritanism, the paper analyzes how the physical environment was utilized as a tool to cultivate and critique religious paranoia.</p>
+                <a href="https://docs.google.com/document/d/1fYhR1t0cz1_GBdoocHuT7j0kHJtzako61OQ7EyWhXbw/edit?usp=sharing" class="read-more" target="_blank">Read full essay</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2026 Tyler Sooknanan. All rights reserved. | <a href="https://www.linkedin.com/in/tyler-sooknanan-134b46220/" target="_blank">LinkedIn</a>
+    </footer>
+
+</body>
+</html>
